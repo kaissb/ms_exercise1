@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Click on the "Choose File" button to upload a file:</p>
+    <h1>upload</h1>
+    <form action="" method="Post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" id="myFile" name="csv_file" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

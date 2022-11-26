@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>good</h1>
+    {% if user.is_authenticated %}
+    <p>Welcome, {{ user.get_username }}. Thanks for logging in.</p>
+    {% else %}
+    <p>Welcome, new user. Please log in.</p>
+    {% endif %}
+    <br />
+    {% comment %} {% for o in costumusers %} {% endcomment %}
+    <h1>{{ costumusers.Prenom }} --||||-- {{costumusers.Type}}</h1>
+    {% if costumusers.Type == "rh" %}
+    <a href="{% url 'UploadCsv' %}">upload csv</a>
+    {% endif %}
+  </body>
+</html>
