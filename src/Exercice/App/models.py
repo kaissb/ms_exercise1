@@ -3,12 +3,17 @@ from django.contrib.auth.models import User
 from datetime import datetime
 
 # Create your models here.
+CosutumUserTypeChoices = (
+    ("rh", "RH"),
+    ("employé", "EMPLOYé"),
+ 
+)
 class CosutumUser(models.Model):
     CosutumUserId=models.BigAutoField(primary_key=True)
     UserId = models.ForeignKey(User,on_delete=models.CASCADE)
     Prenom = models.CharField(max_length=45)
     Nom = models.CharField(max_length=45)
-    Type = models.CharField(max_length=10)
+    Type = models.CharField(max_length=10,choices=CosutumUserTypeChoices)
     
 class Employee(models.Model):
     CosutumUserId = models.ForeignKey(CosutumUser,on_delete=models.CASCADE)

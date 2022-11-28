@@ -56,6 +56,7 @@ def UploadCsv(request):
             return redirect("Home")
         return render(request, "UploadCsv/UploadCsv.html", data)
     try:
+        costumuser = CosutumUser.objects.filter(UserId_id = request.user.id)[0]
         if(costumuser.Type != "rh"):
             return redirect("Home")
         csv_file = request.FILES["csv_file"]
@@ -117,6 +118,7 @@ def UploadCsv(request):
             #emp = Employee.objects.get(id=data_object_response["id"])
             emp = Employee.objects.filter(Cin=data_object_response["Cin"]).first()
             emp.jours_travailles = data_object_response["jours_travailles"]
+            emp.numero_employe = data_object_response["numero_employe"]
             emp.save()
            
         return JsonResponse(response_data,safe=False)
