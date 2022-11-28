@@ -14,12 +14,10 @@
   <body>
     <form action="" method="Post" enctype="multipart/form-data">
       {% csrf_token %}
-      <div class="mb-3">
-        <label for="formFile" class="form-label"
-          >Default file input example</label
-        >
+      <div class="m-4">
+        <label for="formFile" class="form-label">Upload your csv file</label>
         <input class="form-control" type="file" name="csv_file" id="formFile" />
-        <button type="submit" class="m-4 btn btn-primary">Submit</button>
+        <button type="submit" class="m-4 btn btn-primary">Upload</button>
       </div>
     </form>
     <script

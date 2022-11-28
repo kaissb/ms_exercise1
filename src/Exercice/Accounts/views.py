@@ -17,6 +17,14 @@ import json
 import datetime
 from django.core.serializers.json import DjangoJSONEncoder
 import csv
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
+
+def logout_view(request):
+    logout(request)
+    return redirect("login_user")
+    # Redirect to a success page.
+
 
 def login_user(request):
     if request.method == 'POST':
@@ -32,18 +40,24 @@ def login_user(request):
     else:
         return render(request,"Auth/login.html",{})
         
-    
+@login_required(login_url='/Accounts/login_user')
 def Home(request):
-    costumusers = CosutumUser.objects.filter(UserId_id = request.user.id)[0]
-    return render(request,"Home/Home.html",{"costumusers":costumusers})
+    costumuser = CosutumUser.objects.filter(UserId_id = request.user.id)[0]
+    return render(request,"Home/Home.html",{"costumusers":costumuser})
 """ def default(o):
     if isinstance(o, (datetime.date, datetime.datetime)):
         return o.isoformat() """
+@login_required(login_url='/Accounts/login_user')
 def UploadCsv(request):
     data = {}
     if "GET" == request.method:
+        costumuser = CosutumUser.objects.filter(UserId_id = request.user.id)[0]
+        if(costumuser.Type != "rh"):
+            return redirect("Home")
         return render(request, "UploadCsv/UploadCsv.html", data)
     try:
+        if(costumuser.Type != "rh"):
+            return redirect("Home")
         csv_file = request.FILES["csv_file"]
         print(csv_file)
         if not csv_file.name.endswith('.csv'):        
