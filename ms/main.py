@@ -5,8 +5,8 @@ from typing import Union
 
 app = FastAPI()
 class Employee(BaseModel):
-    id: int
-    numero_employe: str
+    #id: int
+    numero_employe: int
     Cin: str
     jours_travailles:int
     date_embauche:Union[date,None]

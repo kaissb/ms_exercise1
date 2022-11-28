@@ -86,15 +86,15 @@ def UploadCsv(request):
         for line in range(len(lines)):
             emp_dict = {}
             fields = lines[line]
-         
-            emp_dict["id"] = int(fields[0])
-            emp_dict["numero_employe"] = fields[1]
-            emp_dict["jours_travailles"] = int(fields[2])
-            emp_dict["date_embauche"] = fields[3]
-            emp_dict["Cin"] = fields[6]
-            emp_dict["date_demission"] = fields[4]
+
+            #emp_dict["id"] = int(fields[0])
+            emp_dict["numero_employe"] = int(fields[0])
+            emp_dict["jours_travailles"] = int(fields[1])
+            #emp_dict["date_embauche"] = fields[3]
+            emp_dict["Cin"] = fields[2]
+            #emp_dict["date_demission"] = fields[4]
             emp_list_dict.append(emp_dict)
-            cins.append(fields[6])
+            cins.append(fields[2])
 
         for index,c in enumerate(cins):
             """ try:
@@ -104,8 +104,11 @@ def UploadCsv(request):
             except Employee.DoesNotExist:
                 print("not exits") """
             if Employee.objects.filter(Cin=c).exists():
-                """ emp = Employee.objects.filter(Cin=c).first() """
-                pass
+                emp_db = Employee.objects.filter(Cin=c).first()
+                current_object = emp_list_dict[index]
+                current_object["date_embauche"] = emp_db.date_embauche
+                current_object["date_demission"] = emp_db.date_demission
+                
             else:
                 emp_list_dict.remove(index)
                 
@@ -122,6 +125,7 @@ def UploadCsv(request):
             emp.save()
            
         return JsonResponse(response_data,safe=False)
+        #return HttpResponse(emp_list_dict_2)
       
           
     except Exception as e:
