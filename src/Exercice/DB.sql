@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 26 nov. 2022 à 11:49
+-- Généré le : lun. 28 nov. 2022 à 12:55
 -- Version du serveur : 10.4.20-MariaDB
 -- Version de PHP : 8.0.8
 
@@ -40,7 +40,8 @@ CREATE TABLE `app_cosutumuser` (
 --
 
 INSERT INTO `app_cosutumuser` (`CosutumUserId`, `Prenom`, `Nom`, `Type`, `UserId_id`) VALUES
-(1, 'zakaria', 'elhosni', 'rh', 1);
+(1, 'zakaria', 'elhosni', 'rh', 1),
+(2, 'zakaria', 'elhosni', 'employé', 2);
 
 -- --------------------------------------------------------
 
@@ -63,28 +64,28 @@ CREATE TABLE `app_employee` (
 --
 
 INSERT INTO `app_employee` (`id`, `numero_employe`, `jours_travailles`, `date_embauche`, `date_demission`, `CosutumUserId_id`, `Cin`) VALUES
-(1, 'jordan', 15, '2022-11-15', '2022-11-30', 1, '03a5uSbq'),
-(2, 'peterson kain', 32, '2022-08-15', '2022-10-30', 1, 'WXhFgQHi'),
-(3, 'jordan', 32, '2022-11-15', '2022-11-30', 1, 'qIVMC9xM'),
-(4, 'kalibolo', 32, '2022-07-15', '2022-08-30', 1, '0cL8PT0Z'),
-(5, 'nathanyal', 32, '2022-01-15', '2022-04-30', 1, 'jBD6h7vg'),
-(6, 'jordan', 32, '2022-11-15', '2022-11-30', 1, 'FJdXiyxF'),
-(7, 'sdcss', 32, '2022-01-15', '2022-11-16', 1, 'aFj9pI9d'),
-(8, 'sssq', 32, '2022-05-15', '2022-09-30', 1, 'QYL37dyD'),
-(9, 'peterson kain', 32, '2022-08-15', '2022-10-30', 1, 'CXRi8g5d'),
-(10, 'jordan', 32, '2022-11-15', '2022-11-30', 1, 'TFJygmy9'),
-(11, 'kalibolo', 32, '2022-07-15', '2022-08-30', 1, 'sIHKBEtO'),
-(12, 'nathanyal', 32, '2022-01-15', '2022-04-30', 1, 'bCuOcEtI'),
-(13, 'jordan', 32, '2022-11-15', '2022-11-30', 1, 'OXk4l48S'),
-(14, 'sdcss', 32, '2022-01-15', '2022-11-30', 1, 'kzxe42Z4'),
-(15, 'sssq', 32, '2022-05-15', '2022-09-30', 1, '9rxiMvOA'),
-(16, 'peterson kain', 32, '2022-08-15', '2022-10-30', 1, 'h9kE6Jqf'),
-(17, 'jordan', 32, '2022-11-15', '2022-11-30', 1, 'hO1VuOVu.'),
-(18, 'kalibolo', 32, '2022-07-15', '2022-08-30', 1, '7UNhyspx'),
-(19, 'nathanyal', 32, '2022-01-15', '2022-04-30', 1, 'NZl20V4X'),
-(20, 'jordan', 32, '2022-11-15', '2022-11-30', 1, 'J5GEpKgT'),
-(21, 'sdcss', 32, '2022-01-15', '2022-11-17', 1, 'rKsC2HPk'),
-(22, 'sssq', 32, '2022-05-17', '2022-09-28', 1, 'm5og2QnI');
+(1, '200000', 19, '2022-11-15', '2022-11-30', 1, '03a5uSbq'),
+(2, '145254', 32, '2022-08-15', '2022-10-30', 1, 'WXhFgQHi'),
+(3, '200002', 28, '2022-11-15', '2022-11-30', 1, 'qIVMC9xM'),
+(4, '100407', 32, '2022-07-15', '2022-08-30', 1, '0cL8PT0Z'),
+(5, '100408', 32, '2022-01-15', '2022-04-30', 1, 'jBD6h7vg'),
+(6, '100411', 32, '2022-11-15', '2022-11-30', 1, 'FJdXiyxF'),
+(7, '251445', 32, '2022-01-15', '2022-11-16', 1, 'aFj9pI9d'),
+(8, '256545', 32, '2022-05-15', '2022-09-30', 1, 'QYL37dyD'),
+(9, '149583', 32, '2022-08-15', '2022-10-30', 1, 'CXRi8g5d'),
+(10, '142565', 32, '2022-11-15', '2022-11-30', 1, 'TFJygmy9'),
+(11, '212565', 32, '2022-07-15', '2022-08-30', 1, 'sIHKBEtO'),
+(12, '145784', 32, '2022-01-15', '2022-04-30', 1, 'bCuOcEtI'),
+(13, '100415', 32, '2022-11-15', '2022-11-30', 1, 'OXk4l48S'),
+(14, '100416', 32, '2022-01-15', '2022-11-30', 1, 'kzxe42Z4'),
+(15, '100475', 32, '2022-05-15', '2022-09-30', 1, '9rxiMvOA'),
+(16, '100463', 32, '2022-08-15', '2022-10-30', 1, 'h9kE6Jqf'),
+(17, '100488', 32, '2022-11-15', '2022-11-30', 1, 'hO1VuOVu.'),
+(18, '100498', 32, '2022-07-15', '2022-08-30', 1, '7UNhyspx'),
+(19, '100507', 32, '2022-01-15', '2022-04-30', 1, 'NZl20V4X'),
+(20, '100506', 32, '2022-11-15', '2022-11-30', 1, 'J5GEpKgT'),
+(21, '100514', 32, '2022-01-15', '2022-11-17', 1, 'rKsC2HPk'),
+(22, '100531', 32, '2022-05-17', '2022-09-28', 1, 'm5og2QnI');
 
 -- --------------------------------------------------------
 
@@ -114,7 +115,35 @@ INSERT INTO `app_file` (`id`, `file_csv`, `traité`, `created`, `updated`, `uplo
 (6, 'App/dcsdcsdcscd_syxeqZu.csv', 1, '2022-11-25 13:55:39.078515', '2022-11-25 13:55:39.078515', 1),
 (7, 'App/dcsdcsdcscd_bEi8aZK.csv', 1, '2022-11-25 13:56:00.215185', '2022-11-25 13:56:00.215185', 1),
 (8, 'App/dcsdcsdcscd_3SdC3tR.csv', 1, '2022-11-25 13:57:49.013538', '2022-11-25 13:57:49.013538', 1),
-(9, 'App/dcsdcsdcscd_iztRzkU.csv', 1, '2022-11-25 15:33:17.094947', '2022-11-25 15:33:17.094947', 1);
+(9, 'App/dcsdcsdcscd_iztRzkU.csv', 1, '2022-11-25 15:33:17.094947', '2022-11-25 15:33:17.094947', 1),
+(10, 'App/new_2.csv', 1, '2022-11-28 08:58:14.998299', '2022-11-28 08:58:14.998299', 1),
+(11, 'App/new_2_UqwGIIP.csv', 1, '2022-11-28 09:00:09.043577', '2022-11-28 09:00:09.043577', 1),
+(12, 'App/new_3.csv', 1, '2022-11-28 09:00:16.043773', '2022-11-28 09:00:16.043773', 1),
+(13, 'App/new_3_NzQ79ir.csv', 1, '2022-11-28 09:17:34.044142', '2022-11-28 09:17:34.044142', 1),
+(14, 'App/new_3_WxvPadP.csv', 1, '2022-11-28 09:18:01.856123', '2022-11-28 09:18:01.856123', 1),
+(15, 'App/new_3_fDf9DRe.csv', 1, '2022-11-28 09:31:48.367537', '2022-11-28 09:31:48.367537', 1),
+(16, 'App/hhhh.csv', 1, '2022-11-28 09:34:32.365246', '2022-11-28 09:34:32.365246', 1),
+(17, 'App/hhhh_ZLHbDsN.csv', 1, '2022-11-28 09:37:24.726475', '2022-11-28 09:37:24.726475', 1),
+(18, 'App/hhhh_idm5CVs.csv', 1, '2022-11-28 09:40:48.704483', '2022-11-28 09:40:48.704483', 1),
+(19, 'App/hhhh_IcAUQmO.csv', 1, '2022-11-28 09:47:42.291475', '2022-11-28 09:47:42.291475', 1),
+(20, 'App/hhhh_oe2Vpy9.csv', 1, '2022-11-28 09:47:50.632296', '2022-11-28 09:47:50.633255', 1),
+(21, 'App/hhhh_t284Mxc.csv', 1, '2022-11-28 09:48:32.581222', '2022-11-28 09:48:32.581222', 1),
+(22, 'App/hhhh_UzloLaH.csv', 1, '2022-11-28 09:50:23.655798', '2022-11-28 09:50:23.655798', 1),
+(23, 'App/hhhh_ukmKuQG.csv', 1, '2022-11-28 09:50:29.017261', '2022-11-28 09:50:29.017261', 1),
+(24, 'App/hhhh_ceNiM3E.csv', 1, '2022-11-28 09:50:41.513139', '2022-11-28 09:50:41.513139', 1),
+(25, 'App/hhhh_DCTMp6q.csv', 1, '2022-11-28 09:50:50.234925', '2022-11-28 09:50:50.234925', 1),
+(26, 'App/hhhh_wZHWCpN.csv', 1, '2022-11-28 09:50:57.891196', '2022-11-28 09:50:57.891196', 1),
+(27, 'App/hhhh_jG6YnDE.csv', 1, '2022-11-28 09:52:03.257828', '2022-11-28 09:52:03.257828', 1),
+(28, 'App/hhhh_iQFdMwT.csv', 1, '2022-11-28 09:52:11.000114', '2022-11-28 09:52:11.000114', 1),
+(29, 'App/hhhh_SfaQe2G.csv', 1, '2022-11-28 09:55:55.959788', '2022-11-28 09:55:55.959788', 1),
+(30, 'App/new_3_RsnYevx.csv', 1, '2022-11-28 09:58:36.405888', '2022-11-28 09:58:36.405888', 1),
+(31, 'App/new_3_jkLRUG4.csv', 1, '2022-11-28 09:58:56.823943', '2022-11-28 09:58:56.823943', 1),
+(32, 'App/new_3_58JLwvf.csv', 1, '2022-11-28 09:59:14.546457', '2022-11-28 09:59:14.546457', 1),
+(33, 'App/new_4.csv', 1, '2022-11-28 10:00:13.923419', '2022-11-28 10:00:13.923419', 1),
+(34, 'App/new_4_mNuT1SR.csv', 1, '2022-11-28 10:05:40.545672', '2022-11-28 10:05:40.545672', 1),
+(35, 'App/new_4_CON8E5q.csv', 1, '2022-11-28 10:07:16.332010', '2022-11-28 10:07:16.332010', 1),
+(36, 'App/new_4_ke2Szx3.csv', 1, '2022-11-28 10:34:03.724998', '2022-11-28 10:34:03.724998', 1),
+(37, 'App/new_5.csv', 1, '2022-11-28 11:52:09.296343', '2022-11-28 11:52:09.296343', 1);
 
 -- --------------------------------------------------------
 
@@ -219,7 +248,8 @@ CREATE TABLE `auth_user` (
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$390000$dRiUijTg8fraInGCN5bkVl$zU2e8H1Vr34le+izXtm+3iQYIEzuUAg/Su8urkG5H1o=', '2022-11-25 08:43:36.694933', 1, 'Zack', '', '', 'Zack@gmail.com', 1, 1, '2022-11-22 09:35:19.500122');
+(1, 'pbkdf2_sha256$390000$dRiUijTg8fraInGCN5bkVl$zU2e8H1Vr34le+izXtm+3iQYIEzuUAg/Su8urkG5H1o=', '2022-11-28 11:51:09.677604', 1, 'Zack', '', '', 'Zack@gmail.com', 1, 1, '2022-11-22 09:35:19.500122'),
+(2, 'pbkdf2_sha256$390000$dRiUijTg8fraInGCN5bkVl$zU2e8H1Vr34le+izXtm+3iQYIEzuUAg/Su8urkG5H1o=', '2022-11-28 11:20:21.141814', 1, 'Korabika', '', '', 'Korabika@gmail.com', 1, 1, '2022-11-22 09:35:19.500122');
 
 -- --------------------------------------------------------
 
@@ -354,7 +384,7 @@ CREATE TABLE `django_session` (
 --
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
-('1zawdhaqp8yzz96h5pqfr2l5dpm83k6l', '.eJxVjEEOwiAQAP_C2RC2wEI9evcNhIWtVA1NSnsy_l1JetDrzGReIsR9K2FvvIY5i7MAcfplFNODaxf5HuttkWmp2zqT7Ik8bJPXJfPzcrR_gxJb6VuPDr11rAGtmQZwkAiGrNkq7Sg7BKAJjUIDxMAKRvSj5683ADqK9wek4jZN:1oyUJ6:v1ZID_-5pf-mkQ4bUhjeJDEsgRujds_j_nMcs-h7jAg', '2022-12-09 08:43:36.712936'),
+('dx9rfy1ejfblljuk7jqc2vst7brxedwg', '.eJxVjEEOwiAQAP_C2RC2wEI9evcNhIWtVA1NSnsy_l1JetDrzGReIsR9K2FvvIY5i7MAcfplFNODaxf5HuttkWmp2zqT7Ik8bJPXJfPzcrR_gxJb6VuPDr11rAGtmQZwkAiGrNkq7Sg7BKAJjUIDxMAKRvSj5683ADqK9wek4jZN:1ozcfF:gvXDff6nbQi8RLP8gaKuQzdVp25WqSAVlz3xo99uTwE', '2022-12-12 11:51:09.684651'),
 ('f68kbsgqji8w1n27x0scxexqpvbyd7wa', 'e30:1oxPiz:W7VS-2sJ1KuUxy4KEVzcMY6xTZkvW5xA_F9Myfbj6VQ', '2022-12-06 09:37:53.615253');
 
 --
@@ -463,7 +493,7 @@ ALTER TABLE `django_session`
 -- AUTO_INCREMENT pour la table `app_cosutumuser`
 --
 ALTER TABLE `app_cosutumuser`
-  MODIFY `CosutumUserId` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `CosutumUserId` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `app_employee`
@@ -475,7 +505,7 @@ ALTER TABLE `app_employee`
 -- AUTO_INCREMENT pour la table `app_file`
 --
 ALTER TABLE `app_file`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT pour la table `auth_group`
@@ -499,7 +529,7 @@ ALTER TABLE `auth_permission`
 -- AUTO_INCREMENT pour la table `auth_user`
 --
 ALTER TABLE `auth_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `auth_user_groups`
