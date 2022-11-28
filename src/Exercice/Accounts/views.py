@@ -100,7 +100,8 @@ def UploadCsv(request):
         response_data = CallMicroservice(emp_list_dict_2)
        
         for data_object_response in response_data:
-            emp = Employee.objects.get(id=data_object_response["id"])
+            #emp = Employee.objects.get(id=data_object_response["id"])
+            emp = Employee.objects.filter(Cin=data_object_response["Cin"]).first()
             emp.jours_travailles = data_object_response["jours_travailles"]
             emp.save()
            

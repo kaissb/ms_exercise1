@@ -44,7 +44,11 @@ def DataProcessing(data:ListEmployee):
             #valid_data.append("emp.jours_travailles")
             pass
         else:
-            valid_data.append(emp)
+            valid_data.append({
+                "jours_travailles":emp.jours_travailles,
+                "numero_employe":emp.numero_employe,
+                "Cin":emp.Cin,
+            })
         
     return valid_data
 

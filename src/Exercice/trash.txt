@@ -288,3 +288,14 @@ def UploadCsv(request):
            #return HttpResponse(emp_list_json_2)
         #return JsonResponse(emp_list_json_2,safe=False)
          #print(data_object_response["id"])
+
+
+
+""" try:
+                emp = Employee.objects.filter(Cin=c).first()
+                dict_obj = model_to_dict( emp )
+                emp_list_json.append(dict_obj)
+            except Employee.DoesNotExist:
+                print("not exits") """
+
+                """ emp = Employee.objects.filter(Cin=c).first() """
